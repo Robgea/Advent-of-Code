@@ -20,7 +20,6 @@ def splitter(lines):
             check_dict = {}
         else:
             blocks = line[0].split(' ')
-            print(blocks)
             for block in blocks:
                 fields = block.split(':')
                 check_dict.update({fields[0] : fields[1]})
