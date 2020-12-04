@@ -15,7 +15,6 @@ A batchfile is generated with sequential groupings of text, each of which has th
 
 The goal for the first problem is to check that every passport has all fields, or that it's only missing "cid".
 
-(My solution produced the answer minus one.)
 
 #Second Problem#
 
@@ -31,4 +30,3 @@ Involves taking the dataset from the first and validating the data.
 * ecl (Eye Color) - exactly one of: amb blu brn gry grn hzl oth.
 * pid (Passport ID) - a nine-digit number, including leading zeroes.
 
-(My solution produced the correct answer plus one.)
