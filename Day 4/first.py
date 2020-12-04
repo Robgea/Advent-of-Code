@@ -5,7 +5,7 @@ def passport_getter():
     csv_read = csv.reader(raw_csv)
     csv_list = list(csv_read)
     csv_list.pop(0)
-    print(csv_list)
+    csv_list.append([])
     
     return csv_list
 

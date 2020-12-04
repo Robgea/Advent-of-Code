@@ -6,6 +6,7 @@ def passport_getter():
     csv_read = csv.reader(raw_csv)
     csv_list = list(csv_read)
     csv_list.pop(0)
+    csv_list.append([])
     
     return csv_list
 
@@ -79,7 +80,7 @@ def height_check(field):
     if field.endswith('in'):
         try:
             field_int = int(field[0:2])
-            if (field_int > 58) and (79 > field_int):
+            if (field_int > 58) and (77 > field_int):
                 return True
             else:
                 return False
@@ -102,7 +103,7 @@ def height_check(field):
 
 def col_check(colour):
     reg_pat = r'[^#a-f0-9.]'
-    if re.search(reg_pat, colour) == True:
+    if (re.search(reg_pat, colour) == True) or (colour.startswith('#') == False):
         return False
     else:
         return True
