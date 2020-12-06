@@ -1,5 +1,4 @@
 import csv
-import math
 
 def pass_getter():
     raw_csv = open("passes.csv", encoding='utf-8')
