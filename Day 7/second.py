@@ -48,4 +48,4 @@ init_bag = 'shiny gold bag'
 bags = bags_getter()
 test = rule_splitter(bags)
 result = bag_searcher(test, init_bag)
-print(result)
+print(result - 1)
