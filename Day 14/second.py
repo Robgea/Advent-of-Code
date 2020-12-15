@@ -15,16 +15,9 @@ def inst_reader(instrs):
     mask = ''
     output_sum = 0
 
-
     for line in instrs:
         if line[0].startswith('mask'):
-            x_count = 0
             mask = line[1]
-
-            for char in mask:
-                if char == 'X':
-                    x_count += 1
-
 
         elif line[0].startswith('mem'):
             input_num = int(line[1])
@@ -46,8 +39,6 @@ def inst_reader(instrs):
             for address in output_mems:
                 output_dict.update({int(address, base = 2) : input_num})
 
-    
-
     for key in output_dict:
         output_sum += output_dict[key]
 
@@ -60,6 +51,7 @@ def list_adder(input_list, char):
         for string in input_list:
             output_list.append(f'{string}1')
             output_list.append(f'{string}0')
+
     if char == '1':
         output_list = [f'{entry}1' for entry in input_list]
 
