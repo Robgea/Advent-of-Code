@@ -10,8 +10,7 @@ nums_list = [16,1,0,18,12,14,19,]
 def number_game(input_list):
     sys.stdout.write(f'Initiated. Time is now: {datetime.datetime.now()}\n')
     sys.stdout.flush()
-
-
+    
     runcount = 1
 
     run_dict = defaultdict(int)
@@ -19,11 +18,10 @@ def number_game(input_list):
     for num in input_list:
         run_dict[num] = runcount
         runcount += 1
-        
+
     start_num = 0
 
-    while 30_000_001 > runcount:
-
+    while 30_000_000 > runcount:
 
         if start_num in run_dict:
             new_num = runcount - run_dict[start_num]
@@ -38,8 +36,6 @@ def number_game(input_list):
         if runcount % 10_000 == 0:
             sys.stdout.write(f'Run count is now: {runcount}\n Time is now {datetime.datetime.now()}\n')
             sys.stdout.flush()
-
-    print(run_dict)
 
     print(start_num)
 
